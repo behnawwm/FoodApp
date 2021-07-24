@@ -39,6 +39,7 @@
         android:layout_marginTop="36dp"
         android:background="@drawable/bg_filled_oval_orange"
         android:text="Login"
+        android:textAllCaps="false"
         android:textColor="@color/white" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -50,6 +51,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/bg_outline_oval_orange"
         android:text="Create an Account"
+        android:textAllCaps="false"
         android:textColor="@color/orange" />
 
 </RelativeLayout>

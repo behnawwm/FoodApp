@@ -62,5 +62,9 @@ dependencies {
     //otp field
     implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'
 
+    //transitions
+    implementation "com.andkulikov:transitionseverywhere:2.0.0"
+
+
 
 }

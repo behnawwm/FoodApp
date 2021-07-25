@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.LoginActivity">
+
+    <View
+        android:id="@+id/top_shade"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/login_top_shade" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="220dp"
+        android:layout_height="185dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:gravity="center_horizontal"
+        android:text="Discover the best foods from over 1,000 restaurants and fast delivery to your doorstep"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btn_login_main"
+        android:layout_width="307dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/login_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/bg_filled_oval_orange"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_register_main"
+        android:layout_width="307dp"
+        android:layout_height="56dp"
+        android:layout_below="@id/btn_login_main"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_outline_oval_orange"
+        android:text="Create an Account"
+        android:textAllCaps="false"
+        android:textColor="@color/orange" />
+
+</RelativeLayout>

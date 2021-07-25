@@ -130,11 +130,11 @@
         android:id="@+id/tv_dont_have_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="8dp"
         android:text="Don't have an Account? Sign Up!"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

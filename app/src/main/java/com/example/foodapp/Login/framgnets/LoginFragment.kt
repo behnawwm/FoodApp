@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.Button
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.foodapp.R
 import com.example.foodapp.databinding.ActivityLoginBinding
@@ -19,13 +21,14 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+
         binding = FragmentLoginBinding.inflate(inflater)
         binding.btnLoginMain.setOnClickListener {
-            findNavController().navigate(R.id.action_global_signInFragment)
+            findNavController().navigate(R.id.action_loginFragment_to_signInFragment)
         }
         binding.btnRegisterMain.setOnClickListener {
-            findNavController().navigate(R.id.action_global_signUpFragment)
+            findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
         }
 
 

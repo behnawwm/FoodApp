@@ -5,12 +5,26 @@
     android:id="@+id/nav_graph_login"
     app:startDestination="@id/loginFragment">
 
-
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.foodapp.Login.framgnets.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loginFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.foodapp.Login.framgnets.SignUpFragment"
@@ -20,7 +34,15 @@
         android:id="@+id/signInFragment"
         android:name="com.example.foodapp.Login.framgnets.SignInFragment"
         android:label="SignInFragment"
-        tools:layout="@layout/fragment_signin" /><action android:id="@+id/action_global_loginFragment" app:destination="@id/loginFragment"/><action android:id="@+id/action_global_signUpFragment" app:destination="@id/signUpFragment"/><action android:id="@+id/action_global_signInFragment" app:destination="@id/signInFragment"/>
+
+        tools:layout="@layout/fragment_signin" />
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
 
 
 </navigation>

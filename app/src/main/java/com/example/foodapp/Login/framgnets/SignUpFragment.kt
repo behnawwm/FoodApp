@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.content.ContextCompat.getColor
 import com.example.foodapp.R
@@ -19,11 +20,13 @@ import com.example.foodapp.databinding.FragmentSignupBinding
 class SignUpFragment : Fragment(R.layout.fragment_signup) {
     lateinit var binding: FragmentSignupBinding
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         binding = FragmentSignupBinding.inflate(inflater)
 
         val hText = "Login"

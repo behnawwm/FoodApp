@@ -12,14 +12,11 @@
         <activity android:name=".Home.HomeActivity">
 
         </activity>
-        <activity android:name=".Intro.IntroActivity">
-
-        </activity>
-        <activity android:name=".SignUpActivity"></activity>
-        <activity android:name=".SignInActivity" >
-
-        </activity>
-        <activity android:name=".Login.LoginActivity" />
+        <activity android:name=".Intro.IntroActivity"></activity>
+        <activity
+            android:name=".Login.LoginActivity"
+            android:windowSoftInputMode="adjustResize"
+            />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

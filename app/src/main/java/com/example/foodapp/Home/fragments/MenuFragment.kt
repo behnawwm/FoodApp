@@ -18,7 +18,6 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
         binding = FragmentMenuBinding.inflate(inflater)
         setHasOptionsMenu(true)
 
-
         return binding.root
     }
 

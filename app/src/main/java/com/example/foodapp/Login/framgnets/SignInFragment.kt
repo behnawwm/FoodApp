@@ -1,5 +1,6 @@
 package com.example.foodapp.Login.framgnets
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -11,6 +12,8 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.content.ContextCompat.getColor
+import androidx.navigation.fragment.findNavController
+import com.example.foodapp.Intro.IntroActivity
 import com.example.foodapp.R
 import com.example.foodapp.databinding.FragmentLoginBinding
 import com.example.foodapp.databinding.FragmentSigninBinding
@@ -25,8 +28,8 @@ class SignInFragment : Fragment(R.layout.fragment_signin) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         binding = FragmentSigninBinding.inflate(inflater)
+
         val hText = "Sign Up!"
         val pText = "Don't have an Account? "
         val text = pText + hText
@@ -40,7 +43,21 @@ class SignInFragment : Fragment(R.layout.fragment_signin) {
         )
 
         binding.tvDontHaveAccount.setText(spannable, TextView.BufferType.SPANNABLE)
+        binding.tvDontHaveAccount.setOnClickListener {
+            findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+        }
 
-        return super.onCreateView(inflater, container, savedInstanceState)
+        binding.btnLogin.setOnClickListener {
+            startActivity(Intent(requireActivity(), IntroActivity::class.java))
+        }
+        binding.btnLoginFacebook.setOnClickListener {
+            startActivity(Intent(requireActivity(), IntroActivity::class.java))
+        }
+        binding.btnLoginGoogle.setOnClickListener {
+            startActivity(Intent(requireActivity(), IntroActivity::class.java))
+        }
+
+
+        return binding.root
     }
 }

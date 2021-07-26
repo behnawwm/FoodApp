@@ -1,10 +1,12 @@
 package com.example.foodapp.Intro
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.transition.TransitionManager
+import com.example.foodapp.Home.HomeActivity
 import com.example.foodapp.R
 import com.example.foodapp.databinding.ActivityIntroBinding
 import com.transitionseverywhere.ChangeText
@@ -78,7 +80,7 @@ class IntroActivity : AppCompatActivity() {
                         binding.textView7.text = introDataSet[this.caption!!.toInt()].desc
                         binding.textView6.text = introDataSet[this.caption!!.toInt()].title
 
-                        if (position - 1073741823 == 2)
+                        if (position == 2)
                             binding.btnIntroNext.text = "Let's Go!"
                         else
                             binding.btnIntroNext.text = "Next"
@@ -88,8 +90,8 @@ class IntroActivity : AppCompatActivity() {
         }
 
         binding.btnIntroNext.setOnClickListener {
-            if (carousel.currentPosition - 1073741823 == 2) {
-                //todo go to another page
+            if (carousel.currentPosition - 1073741823 == 2) {  //todo library bug
+                startActivity(Intent(this@IntroActivity, HomeActivity::class.java))
             } else
                 carousel.currentPosition++
 

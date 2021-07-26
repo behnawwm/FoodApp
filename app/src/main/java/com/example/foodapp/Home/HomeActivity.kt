@@ -26,10 +26,10 @@ class HomeActivity : AppCompatActivity() {
 
         binding.bottomNavigation.background = null
         binding.bottomNavigation.menu.getItem(2).isEnabled = false
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
-            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
-        )
+//        window.setFlags(
+//            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
+//            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
+//        )
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment

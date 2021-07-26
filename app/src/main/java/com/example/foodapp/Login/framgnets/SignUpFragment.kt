@@ -1,5 +1,6 @@
 package com.example.foodapp.Login.framgnets
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -11,6 +12,8 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.content.ContextCompat.getColor
+import androidx.navigation.fragment.findNavController
+import com.example.foodapp.Intro.IntroActivity
 import com.example.foodapp.R
 import com.example.foodapp.databinding.FragmentLoginBinding
 import com.example.foodapp.databinding.FragmentSigninBinding
@@ -42,8 +45,14 @@ class SignUpFragment : Fragment(R.layout.fragment_signup) {
         )
 
         binding.tvAlreadyHaveAccountLogin.setText(spannable, TextView.BufferType.SPANNABLE)
+        binding.tvAlreadyHaveAccountLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
+        }
 
+        binding.btnRegister.setOnClickListener {
+            startActivity(Intent(requireActivity(), IntroActivity::class.java))
+        }
 
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return binding.root
     }
 }

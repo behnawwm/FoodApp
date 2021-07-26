@@ -10,6 +10,7 @@
 
     <color name="orange">#FC6011</color>
     <color name="gray">#F2F2F2</color>
+    <color name="light_gray">#707070</color>
     <color name="gray_disabled">#B6B7B7</color>
     <color name="blue_faceboook">#367FC0</color>
     <color name="red_google">#DD4B39</color>

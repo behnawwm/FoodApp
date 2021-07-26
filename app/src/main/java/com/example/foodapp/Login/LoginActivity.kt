@@ -23,10 +23,6 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        getWindow().setFlags(
-//            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-//            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-//        )
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_login) as NavHostFragment
@@ -34,4 +30,7 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        //disable going to splash screen
+    }
 }

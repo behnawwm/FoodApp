@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home.fragments.MenuFragment">
+    tools:context=".Home.fragments.offers.OffersFragment">
 
-    <Button
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/tv_title_offers"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" />
+        android:layout_marginTop="60dp"
+        android:padding="8dp"
+        android:text="Find discounts, Offers special meals and more!"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_check_offers"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/bg_filled_oval_orange"
+        android:text="Check Offers"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_offers" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_offers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_check_offers"
+        tools:listitem="@layout/item_offer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

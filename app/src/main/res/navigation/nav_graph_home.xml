@@ -27,7 +27,7 @@
         tools:layout="@layout/fragment_profile"/>
     <fragment
         android:id="@+id/offersFragment"
-        android:name="com.example.foodapp.Home.fragments.OffersFragment"
+        android:name="com.example.foodapp.Home.fragments.offers.OffersFragment"
         android:label="Offers"
         tools:layout="@layout/fragment_offers"/>
     <action

@@ -10,7 +10,7 @@
         android:icon="@drawable/ic_offer"
         android:title="Offers"/>
     <item
-        android:id="@+id/placeholder"
+        android:id="@+id/menu_placeholder"
         android:enabled="true"
         android:title=""/>
     <item

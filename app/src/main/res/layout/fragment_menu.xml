@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Home.fragments.MenuFragment">
+    tools:context=".ui.Home.fragments.menu.MenuFragment">
 
     <SearchView
         android:id="@+id/search_view"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toTopOf="@+id/view">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_chevron1"
+            android:id="@+id/btn_chevron_food"
             style="@style/Widget.AppCompat.Button.IconOnly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -107,6 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout1">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_chevron_beverages"
             style="@style/Widget.AppCompat.Button.IconOnly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -160,8 +161,8 @@
             android:layout_height="87dp"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="24dp"
-            android:clickable="true"
             android:background="@drawable/ripple_menu_item"
+            android:clickable="true"
             android:elevation="1dp"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
@@ -177,6 +178,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_chevron_desserts"
             style="@style/Widget.AppCompat.Button.IconOnly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -231,8 +233,8 @@
             android:layout_marginLeft="60dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/ripple_menu_item"
-            android:elevation="1dp"
             android:clickable="true"
+            android:elevation="1dp"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
 
@@ -247,7 +249,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/problem"
+            android:id="@+id/btn_chevron_promotions"
             style="@style/Widget.AppCompat.Button.IconOnly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -301,8 +303,8 @@
             android:layout_marginLeft="60dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/ripple_menu_item"
-            android:elevation="1dp"
             android:clickable="true"
+            android:elevation="1dp"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
 

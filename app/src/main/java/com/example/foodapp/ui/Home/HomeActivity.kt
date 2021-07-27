@@ -5,6 +5,7 @@ import android.view.Menu
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.forEach
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -37,6 +38,7 @@ class HomeActivity : AppCompatActivity() {
             bottomNavigation.menu.getItem(2).isEnabled = false
 
             bottomNavigation.setOnNavigationItemSelectedListener {
+                fabHome.backgroundTintList = resources.getColorStateList(R.color.tint_gray_disabled)
                 when (it.itemId) {
                     R.id.menu_menu -> {
                         navController.navigate(R.id.action_global_menuFragment)
@@ -44,9 +46,6 @@ class HomeActivity : AppCompatActivity() {
                     R.id.menu_offers -> {
                         navController.navigate(R.id.action_global_offersFragment)
                     }
-//                R.id.menu -> {
-//                    // Respond to navigation home reselection
-//                }
                     R.id.menu_profile -> {
                         navController.navigate(R.id.action_global_profileFragment)
                     }
@@ -55,6 +54,15 @@ class HomeActivity : AppCompatActivity() {
                     }
                 }
                 true
+            }
+
+            fabHome.setOnClickListener {
+                fabHome.backgroundTintList = resources.getColorStateList(R.color.tint_orange)
+                bottomNavigation.menu.forEach {
+                    if (it.isChecked)
+                        bottomNavigation.selectedItemId = R.id.menu_placeholder
+                }
+                navController.navigate(R.id.action_global_homeFragment)
             }
         }
 

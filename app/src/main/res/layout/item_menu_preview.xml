@@ -3,30 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="266dp">
+    android:layout_height="190dp">
 
     <ImageView
         android:id="@+id/image_view"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@id/image_view"
+        android:background="@drawable/shape_gradient_shadow"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/image_view"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginBottom="45dp"
         android:ellipsize="end"
         android:gravity="center_vertical"
         android:maxLines="1"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_view"
         tools:text="username" />
 
     <TextView
@@ -50,6 +60,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="5dp"
         android:text="(124 ratings)"
+        android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tv_ratings"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
@@ -61,6 +72,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="5dp"
         android:text="Cafe"
+        android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tv_ratings_number"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
@@ -75,6 +87,7 @@
         android:drawablePadding="4dp"
         android:drawableTint="@color/orange"
         android:text="Desserts"
+        android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tv_desc"
         app:layout_constraintTop_toBottomOf="@+id/tv_title" />

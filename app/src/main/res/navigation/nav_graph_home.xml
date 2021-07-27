@@ -7,29 +7,33 @@
 
     <fragment
         android:id="@+id/menuFragment"
-        android:name="com.example.foodapp.ui.Home.fragments.MenuFragment"
+        android:name="com.example.foodapp.ui.Home.fragments.menu.MenuFragment"
         android:label="Menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_menuFragment_to_menuPreviewFragment"
+            app:destination="@id/menuPreviewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.foodapp.ui.Home.fragments.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/moreFragment"
         android:name="com.example.foodapp.ui.Home.fragments.MoreFragment"
         android:label="More"
-        tools:layout="@layout/fragment_more"/>
+        tools:layout="@layout/fragment_more" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.foodapp.ui.Home.fragments.ProfileFragment"
         android:label="Profile"
-        tools:layout="@layout/fragment_profile"/>
+        tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/offersFragment"
         android:name="com.example.foodapp.ui.Home.fragments.offers.OffersFragment"
         android:label="Offers"
-        tools:layout="@layout/fragment_offers"/>
+        tools:layout="@layout/fragment_offers" />
     <action
         android:id="@+id/action_global_menuFragment"
         app:destination="@id/menuFragment" />
@@ -45,4 +49,9 @@
     <action
         android:id="@+id/action_global_offersFragment"
         app:destination="@id/offersFragment" />
+    <fragment
+        android:id="@+id/menuPreviewFragment"
+        android:name="com.example.foodapp.ui.Home.fragments.menu.MenuPreviewFragment"
+        android:label="MenuPreviewFragment"
+        tools:layout="@layout/fragment_menu_preview" />
 </navigation>

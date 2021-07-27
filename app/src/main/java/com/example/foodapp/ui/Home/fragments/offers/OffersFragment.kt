@@ -30,7 +30,7 @@ class OffersFragment : Fragment(R.layout.fragment_offers), OffersAdapter.OnItemP
         binding.apply {
             rvOffers.setHasFixedSize(true)
             rvOffers.adapter = offersAdapter
-            rvOffers.addItemDecoration(initRecyclerDivider())
+//            rvOffers.addItemDecoration(initRecyclerDivider())
 
             btnCheckOffers.setOnClickListener {
                 offersAdapter.submitList(

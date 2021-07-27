@@ -1,4 +1,4 @@
-package com.example.foodapp.Home.fragments.offers
+package com.example.foodapp.data.models
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

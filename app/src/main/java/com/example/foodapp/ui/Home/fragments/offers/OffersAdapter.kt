@@ -1,4 +1,4 @@
-package com.example.foodapp.Home.fragments.offers
+package com.example.foodapp.ui.Home.fragments.offers
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.foodapp.R
+import com.example.foodapp.data.models.OfferItem
 import com.example.foodapp.databinding.ItemOfferBinding
 
 class OffersAdapter(val listener: OnItemPressListener) :

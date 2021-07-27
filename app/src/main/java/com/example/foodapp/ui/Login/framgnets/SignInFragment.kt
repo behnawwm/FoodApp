@@ -1,4 +1,4 @@
-package com.example.foodapp.Login.framgnets
+package com.example.foodapp.ui.Login.framgnets
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,13 +9,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.content.ContextCompat.getColor
 import androidx.navigation.fragment.findNavController
-import com.example.foodapp.Intro.IntroActivity
+import com.example.foodapp.ui.Intro.IntroActivity
 import com.example.foodapp.R
-import com.example.foodapp.databinding.FragmentLoginBinding
 import com.example.foodapp.databinding.FragmentSigninBinding
 
 
@@ -30,6 +28,30 @@ class SignInFragment : Fragment(R.layout.fragment_signin) {
     ): View? {
         binding = FragmentSigninBinding.inflate(inflater)
 
+        binding.apply {
+            tvDontHaveAccount.setText(makeSpannableText(), TextView.BufferType.SPANNABLE)
+            tvDontHaveAccount.setOnClickListener {
+                findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
+            }
+            btnLogin.setOnClickListener {
+                startActivity(Intent(requireActivity(), IntroActivity::class.java))
+            }
+            btnLoginFacebook.setOnClickListener {
+                startActivity(Intent(requireActivity(), IntroActivity::class.java))
+            }
+            btnLoginGoogle.setOnClickListener {
+                startActivity(Intent(requireActivity(), IntroActivity::class.java))
+            }
+            tvForgotPassword.setOnClickListener {
+                findNavController().navigate(R.id.action_signInFragment_to_forgotPasswordFragment)
+            }
+        }
+
+
+        return binding.root
+    }
+
+    fun makeSpannableText(): Spannable {
         val hText = "Sign Up!"
         val pText = "Don't have an Account? "
         val text = pText + hText
@@ -41,26 +63,6 @@ class SignInFragment : Fragment(R.layout.fragment_signin) {
             pText.length + hText.length,
             Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
         )
-
-        binding.tvDontHaveAccount.setText(spannable, TextView.BufferType.SPANNABLE)
-        binding.tvDontHaveAccount.setOnClickListener {
-            findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
-        }
-
-        binding.btnLogin.setOnClickListener {
-            startActivity(Intent(requireActivity(), IntroActivity::class.java))
-        }
-        binding.btnLoginFacebook.setOnClickListener {
-            startActivity(Intent(requireActivity(), IntroActivity::class.java))
-        }
-        binding.btnLoginGoogle.setOnClickListener {
-            startActivity(Intent(requireActivity(), IntroActivity::class.java))
-        }
-        binding.tvForgotPassword.setOnClickListener {
-            findNavController().navigate(R.id.action_signInFragment_to_forgotPasswordFragment)
-        }
-
-
-        return binding.root
+        return spannable
     }
 }

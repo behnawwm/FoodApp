@@ -1,4 +1,4 @@
-package com.example.foodapp.Home
+package com.example.foodapp.ui.Home
 
 import android.os.Bundle
 import android.view.Menu
@@ -23,46 +23,40 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bottomNavigation.background = null
-        binding.bottomNavigation.menu.getItem(2).isEnabled = false
-//        window.setFlags(
-//            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
-//            WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN
-//        )
-
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         navController = navHostFragment.findNavController()
-
-
         val appBarConfiguration = AppBarConfiguration(navController.graph)
 //        setupActionBarWithNavController(navController, appBarConfiguration)
         val toolbar = binding.toolbar
         toolbar.setupWithNavController(navController, appBarConfiguration)
         setSupportActionBar(toolbar)
 
-        binding.bottomNavigation.setOnNavigationItemSelectedListener {
-            when (it.itemId) {
-                R.id.menu_menu -> {
-                    navController.navigate(R.id.action_global_menuFragment)
-                }
-                R.id.menu_offers -> {
-                    navController.navigate(R.id.action_global_offersFragment)
-                }
+        binding.apply {
+            bottomNavigation.background = null
+            bottomNavigation.menu.getItem(2).isEnabled = false
+
+            bottomNavigation.setOnNavigationItemSelectedListener {
+                when (it.itemId) {
+                    R.id.menu_menu -> {
+                        navController.navigate(R.id.action_global_menuFragment)
+                    }
+                    R.id.menu_offers -> {
+                        navController.navigate(R.id.action_global_offersFragment)
+                    }
 //                R.id.menu -> {
 //                    // Respond to navigation home reselection
 //                }
-                R.id.menu_profile -> {
-                    navController.navigate(R.id.action_global_profileFragment)
+                    R.id.menu_profile -> {
+                        navController.navigate(R.id.action_global_profileFragment)
+                    }
+                    R.id.menu_more -> {
+                        navController.navigate(R.id.action_global_moreFragment)
+                    }
                 }
-                R.id.menu_more -> {
-                    navController.navigate(R.id.action_global_moreFragment)
-                }
+                true
             }
-            true
         }
-
-
 
     }
 

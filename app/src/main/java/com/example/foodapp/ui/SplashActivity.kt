@@ -1,11 +1,12 @@
-package com.example.foodapp
+package com.example.foodapp.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.lifecycle.lifecycleScope
-import com.example.foodapp.Login.LoginActivity
+import com.example.foodapp.R
+import com.example.foodapp.ui.Login.LoginActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

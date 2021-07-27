@@ -1,4 +1,4 @@
-package com.example.foodapp.Login
+package com.example.foodapp.ui.Login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

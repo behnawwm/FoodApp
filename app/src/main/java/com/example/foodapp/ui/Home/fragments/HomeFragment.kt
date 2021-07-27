@@ -1,4 +1,4 @@
-package com.example.foodapp.Home.fragments
+package com.example.foodapp.ui.Home.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,6 @@ import android.view.ViewGroup
 import com.example.foodapp.R
 
 
-class MoreFragment : Fragment(R.layout.fragment_more) {
+class HomeFragment : Fragment(R.layout.fragment_home) {
 
 }

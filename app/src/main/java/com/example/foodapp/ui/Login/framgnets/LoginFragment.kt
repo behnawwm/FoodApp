@@ -1,4 +1,4 @@
-package com.example.foodapp.Login.framgnets
+package com.example.foodapp.ui.Login.framgnets
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -22,13 +22,15 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         binding = FragmentLoginBinding.inflate(inflater)
-        binding.btnLoginMain.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_signInFragment)
-        }
-        binding.btnRegisterMain.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
+
+        binding.apply {
+            btnLoginMain.setOnClickListener {
+                findNavController().navigate(R.id.action_loginFragment_to_signInFragment)
+            }
+            btnRegisterMain.setOnClickListener {
+                findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
+            }
         }
 
 

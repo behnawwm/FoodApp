@@ -1,4 +1,4 @@
-package com.example.foodapp.Home.fragments
+package com.example.foodapp.ui.Home.fragments
 
 import android.os.Bundle
 import android.view.*

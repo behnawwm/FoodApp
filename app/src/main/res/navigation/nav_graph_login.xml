@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.foodapp.Login.framgnets.LoginFragment"
+        android:name="com.example.foodapp.ui.Login.framgnets.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.foodapp.Login.framgnets.SignUpFragment"
+        android:name="com.example.foodapp.ui.Login.framgnets.SignUpFragment"
         android:label="SignUpFragment"
         tools:layout="@layout/fragment_signup">
         <action
@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.foodapp.Login.framgnets.SignInFragment"
+        android:name="com.example.foodapp.ui.Login.framgnets.SignInFragment"
         android:label="SignInFragment"
         tools:layout="@layout/fragment_signin">
         <action
@@ -74,12 +74,12 @@
         app:popExitAnim="@anim/slide_out_right" />
     <fragment
         android:id="@+id/otpFragment"
-        android:name="com.example.foodapp.Login.framgnets.OtpFragment"
+        android:name="com.example.foodapp.ui.Login.framgnets.OtpFragment"
         android:label="OtpFragment"
         tools:layout="@layout/fragment_otp" />
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.example.foodapp.Login.framgnets.ForgotPasswordFragment"
+        android:name="com.example.foodapp.ui.Login.framgnets.ForgotPasswordFragment"
         android:label="ForgotPasswordFragment"
         tools:layout="@layout/fragment_forgot_password" >
         <action
@@ -92,7 +92,7 @@
     </fragment>
     <fragment
         android:id="@+id/resetPasswordFragment"
-        android:name="com.example.foodapp.Login.framgnets.ResetPasswordFragment"
+        android:name="com.example.foodapp.ui.Login.framgnets.ResetPasswordFragment"
         android:label="ResetPasswordFragment"
         tools:layout="@layout/fragment_reset_password"
         />

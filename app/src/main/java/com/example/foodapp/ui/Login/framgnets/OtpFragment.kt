@@ -1,4 +1,4 @@
-package com.example.foodapp.Login.framgnets
+package com.example.foodapp.ui.Login.framgnets
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,11 +12,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.example.foodapp.Intro.IntroActivity
+import com.example.foodapp.ui.Intro.IntroActivity
 import com.example.foodapp.R
 import com.example.foodapp.databinding.FragmentOtpBinding
-import com.mukesh.OnOtpCompletionListener
-import com.mukesh.OtpView
 
 
 class OtpFragment : Fragment(R.layout.fragment_otp) {
@@ -29,17 +27,21 @@ class OtpFragment : Fragment(R.layout.fragment_otp) {
     ): View {
         binding = FragmentOtpBinding.inflate(inflater)
 
-        val otpView = binding.otpView
-        otpView.setOtpCompletionListener {
-            Log.d("mamad", it)
-
-            if (it == "1234")
+        binding.apply {
+            tvDontReceive.setText(makeTextSpannable(), TextView.BufferType.SPANNABLE)
+            btnNextOtp.setOnClickListener {
                 startActivity(Intent(requireActivity(), IntroActivity::class.java))
-        }
-        binding.btnNextOtp?.setOnClickListener {
-            startActivity(Intent(requireActivity(), IntroActivity::class.java))
+            }
+            otpView.setOtpCompletionListener {
+                if (it == "1234")
+                    startActivity(Intent(requireActivity(), IntroActivity::class.java))
+            }
         }
 
+        return binding.root
+    }
+
+    fun makeTextSpannable(): Spannable {
         val hText = "Click Here"
         val pText = "Didn't Receive? "
         val text = pText + hText
@@ -51,11 +53,7 @@ class OtpFragment : Fragment(R.layout.fragment_otp) {
             pText.length + hText.length,
             Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
         )
-        binding.tvDontReceive.setText(spannable, TextView.BufferType.SPANNABLE)
-
-
-
-        return binding.root
+        return spannable
     }
 
 }

@@ -11,19 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodApp">
-        <activity android:name=".Home.HomeActivity">
+        <activity android:name=".ui.Home.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Intro.IntroActivity">
+        <activity android:name=".ui.Intro.IntroActivity">
 
         </activity>
         <activity
-            android:name=".Login.LoginActivity"
+            android:name=".ui.Login.LoginActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".ui.SplashActivity">
 
         </activity>
     </application>

@@ -2,6 +2,7 @@ package com.example.foodapp.ui.Home.fragments.menu
 
 import android.os.Bundle
 import android.view.*
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.foodapp.R
@@ -20,21 +21,34 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
         setHasOptionsMenu(true)
 
         binding.apply {
-            constraintLayout1.setOnClickListener {
+            btnChevronPromotions.setOnClickListener {
                 findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
             }
-            constraintLayout2.setOnClickListener {
+            btnChevronDesserts.setOnClickListener {
                 findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
             }
-            constraintLayout3.setOnClickListener {
+            btnChevronFood.setOnClickListener {
                 findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
             }
-            constraintLayout4.setOnClickListener {
+            btnChevronBeverages.setOnClickListener {
                 findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
             }
 
+            view11.setOnClickListener {
+                findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
+            }
+            view21.setOnClickListener {
+                findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
+            }
+            view31.setOnClickListener {
+                findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
+            }
+            view41.setOnClickListener {
+                findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
+            }
 
         }
+
         return binding.root
     }
 

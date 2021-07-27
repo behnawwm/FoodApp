@@ -50,7 +50,7 @@ class SignUpFragment : Fragment(R.layout.fragment_signup) {
         }
 
         binding.btnRegister.setOnClickListener {
-            startActivity(Intent(requireActivity(), IntroActivity::class.java))
+            findNavController().navigate(R.id.action_signUpFragment_to_otpFragment)
         }
 
         return binding.root

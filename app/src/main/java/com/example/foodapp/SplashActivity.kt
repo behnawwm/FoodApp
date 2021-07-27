@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
         )
 
         lifecycleScope.launch {
-            delay(1500)
+            delay(500)
             startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
         }
 

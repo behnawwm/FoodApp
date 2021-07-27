@@ -12,9 +12,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-<!--        make status bar transparent-->
-<!--        <item name="android:windowTranslucentStatus">true</item>-->
-<!--        <item name="android:windowTranslucentNavigation">true</item>-->
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+
     </style>
 
     <style name="customFab" parent="Widget.MaterialComponents.FloatingActionButton">
@@ -30,4 +29,5 @@
         <item name="android:minHeight">12dp</item>
         <item name="iconGravity">textStart</item>
     </style>
+
 </resources>

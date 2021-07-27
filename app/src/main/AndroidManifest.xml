@@ -10,10 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodApp">
         <activity android:name=".Home.HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".Intro.IntroActivity">
 
@@ -23,7 +20,10 @@
             android:windowSoftInputMode="adjustResize"
             />
         <activity android:name=".SplashActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

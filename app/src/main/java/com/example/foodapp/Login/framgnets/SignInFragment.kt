@@ -56,6 +56,9 @@ class SignInFragment : Fragment(R.layout.fragment_signin) {
         binding.btnLoginGoogle.setOnClickListener {
             startActivity(Intent(requireActivity(), IntroActivity::class.java))
         }
+        binding.tvForgotPassword.setOnClickListener {
+            findNavController().navigate(R.id.action_signInFragment_to_forgotPasswordFragment)
+        }
 
 
         return binding.root

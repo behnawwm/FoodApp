@@ -74,7 +74,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tv_forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -92,7 +92,7 @@
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_login_facebook"

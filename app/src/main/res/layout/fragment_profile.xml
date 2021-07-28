@@ -1,18 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="30dp"
     tools:context=".ui.Home.fragments.menu.MenuFragment">
 
-    <TextView
-        app:layout_constraintBottom_toBottomOf="parent"
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/photo_person" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_change_profile"
+            style="@style/customWhiteFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_profile"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-30dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/gray"
+            android:src="@drawable/ic_camera"
+            app:fabSize="mini" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_edit_profile"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/iv_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_filled_oval_orange"
+            android:drawableLeft="@drawable/ic_edit_10dp"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/white"
+            android:paddingLeft="12dp"
+            android:paddingRight="8dp"
+            android:text="Edit Profile"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="profile" />
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_circle_name"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_person" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/iv_circle_name"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name_static_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:" />
+
+            <TextView
+                android:id="@+id/tv_name_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Bruno Mars"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_circle_email"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:padding="3dp"
+            android:src="@drawable/ic_email" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/iv_circle_email"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:" />
+
+            <TextView
+                android:id="@+id/tv_email_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Bruno.mars12@gmail.com"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_circle_phone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:padding="1dp"
+            android:src="@drawable/ic_phone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/iv_circle_phone"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone:" />
+
+            <TextView
+                android:id="@+id/tv_phone_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="+1-202-555-0139"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_circle_address"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_location" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/iv_circle_address"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address:" />
+
+            <TextView
+                android:id="@+id/tv_address_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="544 Rubaiyat Road, Mancelona"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

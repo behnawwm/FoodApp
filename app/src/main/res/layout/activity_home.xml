@@ -43,7 +43,7 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_home"
-        style="@style/customFab"
+        style="@style/customDisabledFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_home"

@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_menu">
         <action
             android:id="@+id/action_menuFragment_to_menuPreviewFragment"
-            app:destination="@id/menuPreviewFragment" />
+            app:destination="@id/menuPreviewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -56,7 +60,11 @@
         tools:layout="@layout/fragment_menu_preview">
         <action
             android:id="@+id/action_menuPreviewFragment_to_foodPreviewFragment"
-            app:destination="@id/foodPreviewFragment" />
+            app:destination="@id/foodPreviewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/foodPreviewFragment"

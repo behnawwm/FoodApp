@@ -16,9 +16,13 @@
 
     </style>
 
-    <style name="customFab" parent="Widget.MaterialComponents.FloatingActionButton">
+    <style name="customDisabledFab" parent="Widget.MaterialComponents.FloatingActionButton">
         <item name="tint">@color/white</item>
         <item name="backgroundTint">@color/gray_disabled</item>
+    </style>
+    <style name="customWhiteFab" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="tint">@color/orange</item>
+        <item name="backgroundTint">@color/white</item>
     </style>
 
     <style name="Widget.AppCompat.Button.IconOnly">

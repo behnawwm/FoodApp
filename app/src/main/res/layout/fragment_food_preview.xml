@@ -41,20 +41,18 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_food_preview"
+        style="@style/customWhiteFab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
-        android:backgroundTint="@color/white"
         android:baselineAlignBottom="false"
-        android:clickable="true"
         android:src="@drawable/ic_star_filled"
         app:borderWidth="0dp"
-        app:fabSize="normal"
         app:layout_anchor="@id/appabr_food_preview"
-        app:layout_anchorGravity="end|bottom"
-        app:tint="@color/orange" />
+        app:layout_anchorGravity="end|bottom" />
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_Scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/shape_round_top_collapsing_toolbar"
@@ -63,136 +61,283 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="22dp">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:text="Sign Up"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                android:text="Tandoori Chicken Pizza"
+                android:textSize="22sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginTop="6dp"
+                android:numStars="5"
+                android:progressTint="@color/orange"
+                android:rating="3.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Add your details to sign up"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="4dp"
+                android:text="3.5 Star Ratings"
+                android:textColor="@color/orange"
+                android:textSize="11sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditText"
-                android:layout_width="307dp"
-                android:layout_height="56dp"
-                android:layout_marginTop="36dp"
-                android:background="@drawable/bg_filled_oval_orange"
-                android:backgroundTint="@color/gray"
-                android:hint="Name"
-                android:paddingLeft="34dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditText3"
-                android:layout_width="307dp"
-                android:layout_height="56dp"
-                android:layout_marginTop="28dp"
-                android:background="@drawable/bg_filled_oval_orange"
-                android:backgroundTint="@color/gray"
-                android:hint="Email"
-                android:paddingLeft="34dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditText4"
-                android:layout_width="307dp"
-                android:layout_height="56dp"
-                android:layout_marginTop="28dp"
-
-                android:background="@drawable/bg_filled_oval_orange"
-                android:backgroundTint="@color/gray"
-                android:hint="Mobile No"
-                android:paddingLeft="34dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputEditText3" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditText6"
-                android:layout_width="307dp"
-                android:layout_height="56dp"
-                android:layout_marginTop="28dp"
-
-                android:background="@drawable/bg_filled_oval_orange"
-                android:backgroundTint="@color/gray"
-                android:hint="Address"
-                android:paddingLeft="34dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputEditText4" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditText7"
-                android:layout_width="307dp"
-                android:layout_height="56dp"
-
-                android:layout_marginTop="28dp"
-                android:background="@drawable/bg_filled_oval_orange"
-                android:backgroundTint="@color/gray"
-                android:hint="Password"
-                android:paddingLeft="34dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputEditText6" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputEditText5"
-                android:layout_width="307dp"
-                android:layout_height="56dp"
-
-                android:layout_marginTop="28dp"
-                android:background="@drawable/bg_filled_oval_orange"
-                android:backgroundTint="@color/gray"
-                android:hint="Confirm Password"
-                android:paddingLeft="34dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputEditText7" />
-
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_register"
-                android:layout_width="307dp"
-                android:layout_height="56dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="28dp"
-                android:background="@drawable/bg_filled_oval_orange"
-                android:text="Sign Up"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputEditText5" />
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
 
             <TextView
-                android:id="@+id/tv_already_have_account_login"
+                android:id="@+id/tv_food_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="46dp"
+                android:text="$ 14.99"
+                android:textSize="31sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/ per piece"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_food_price" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Description"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:lines="2"
+                android:maxLines="3"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare leo non mollis id cursus. Eu euismod faucibus in leo malesuada"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Customize your Order"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/gray"
+                android:gravity="center"
+                android:hint="- Select the size of portion -"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_arrow_tint="@color/gray_disabled"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_elevation="14dp" />
+
+            <com.skydoves.powerspinner.PowerSpinnerView
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="14dp"
+                android:background="@color/gray"
+                android:gravity="center"
+                android:hint="- Select the ingredients -"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner1"
+                app:spinner_arrow_gravity="end"
+                app:spinner_arrow_padding="8dp"
+                app:spinner_arrow_tint="@color/gray_disabled"
+                app:spinner_popup_animation="dropdown"
+                app:spinner_popup_elevation="14dp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="135dp"
+                android:layout_height="17dp"
+                android:layout_marginTop="30dp"
+                android:text="Number of Portions"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="Already have an Account? Login"
+                android:orientation="horizontal"
+                android:padding="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner2">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_portion_decrease"
+                    android:layout_width="52dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_filled_oval_orange"
+                    android:backgroundTint="@color/orange"
+                    android:text="-"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_number_portion"
+                    android:layout_width="47dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/bg_outline_oval_orange"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/orange" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_portion_increase"
+                    android:layout_width="52dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/bg_filled_oval_orange"
+                    android:backgroundTint="@color/orange"
+                    android:text="+"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginLeft="-22dp"
+                android:layout_marginTop="27dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+                app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_menu_left_orange"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view_white_middle"
+                    android:layout_width="277dp"
+                    android:layout_height="122dp"
+                    android:layout_marginLeft="54dp"
+                    android:background="@drawable/shape_menu_categories"
+                    android:elevation="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="2dp"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@id/view_white_middle"
+                    app:layout_constraintTop_toTopOf="@id/view_white_middle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Total Price"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="$ 14.99"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_filled_oval_orange"
+                        android:drawableLeft="@drawable/ic_cart"
+                        android:drawablePadding="18dp"
+                        android:drawableTint="@color/white"
+                        android:paddingLeft="17dp"
+                        android:paddingTop="6dp"
+                        android:paddingRight="17dp"
+                        android:paddingBottom="6dp"
+                        android:text="Add to Cart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_cart"
+                    style="@style/Widget.AppCompat.Button.IconOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="320dp"
+                    android:background="@drawable/shape_round_button"
+                    android:backgroundTint="@color/white"
+                    android:drawableStart="@drawable/ic_cart"
+                    android:drawableTint="@color/orange"
+                    android:elevation="3dp"
+                    android:padding="6dp"
+                    android:translationZ="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

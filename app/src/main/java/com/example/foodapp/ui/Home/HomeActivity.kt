@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.forEach
@@ -11,9 +12,12 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.foodapp.R
 import com.example.foodapp.databinding.ActivityHomeBinding
+import com.github.dhaval2404.imagepicker.ImagePicker
 
 
 class HomeActivity : AppCompatActivity() {
@@ -28,11 +32,19 @@ class HomeActivity : AppCompatActivity() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         navController = navHostFragment.findNavController()
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
-//        setupActionBarWithNavController(navController, appBarConfiguration)
-        val toolbar = binding.toolbar
-        toolbar.setupWithNavController(navController, appBarConfiguration)
-        setSupportActionBar(toolbar)
+        ///// appbar
+        val appBarConfiguration = AppBarConfiguration(
+            topLevelDestinationIds = setOf(
+                R.id.menuFragment, R.id.offersFragment,
+                R.id.homeFragment, R.id.moreFragment,
+                R.id.profileFragment
+            ),
+            fallbackOnNavigateUpListener = ::onSupportNavigateUp
+        )
+        setSupportActionBar(binding.toolbar)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        ////////
+
 
         binding.apply {
             bottomNavigation.background = null
@@ -69,11 +81,11 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        if (item.itemId == android.R.id.home) {
-//            onBackPressed()
-//            return true
-//        }
-//        return true
-//    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            onBackPressed()
+            return true
+        }
+        return true
+    }
 }

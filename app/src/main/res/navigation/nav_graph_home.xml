@@ -55,7 +55,7 @@
         app:destination="@id/offersFragment" />
     <fragment
         android:id="@+id/menuPreviewFragment"
-        android:name="com.example.foodapp.ui.Home.fragments.menu.MenuPreviewFragment"
+        android:name="com.example.foodapp.ui.Home.fragments.menu.menuPreview.MenuPreviewFragment"
         android:label="MenuPreviewFragment"
         tools:layout="@layout/fragment_menu_preview">
         <action
@@ -68,7 +68,7 @@
     </fragment>
     <fragment
         android:id="@+id/foodPreviewFragment"
-        android:name="com.example.foodapp.ui.Home.fragments.menu.FoodPreviewFragment"
+        android:name="com.example.foodapp.ui.Home.fragments.menu.foodPreview.FoodPreviewFragment"
         android:label="FoodPreviewFragment"
         tools:layout="@layout/fragment_food_preview" />
 </navigation>

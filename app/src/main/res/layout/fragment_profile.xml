@@ -38,8 +38,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_edit_profile"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
             android:layout_below="@id/iv_profile"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="32dp"

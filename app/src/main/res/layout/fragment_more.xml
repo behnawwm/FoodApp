@@ -13,7 +13,8 @@
         android:layout_width="320dp"
         android:layout_height="75dp"
         android:layout_marginTop="60dp"
-        android:background="@drawable/shape_corner_more_framgnet"
+        android:background="@drawable/ripple_menu_item_gray"
+        android:clickable="true"
         android:translationZ="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,9 +26,9 @@
             android:layout_height="53dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="13dp"
-            android:backgroundTint="@color/orange"
-            android:src="@drawable/ic_payment"
-            app:civ_circle_background_color="@color/gray2" />
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:src="@drawable/ic_payment" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -45,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:clickable="false"
         android:layout_marginLeft="302dp"
         android:background="@drawable/shape_round_button"
         android:backgroundTint="@color/gray"
@@ -60,7 +62,8 @@
         android:layout_width="320dp"
         android:layout_height="75dp"
         android:layout_marginTop="19dp"
-        android:background="@drawable/shape_corner_more_framgnet"
+        android:background="@drawable/ripple_menu_item_gray"
+        android:clickable="true"
         android:translationZ="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout1">
@@ -71,8 +74,9 @@
             android:layout_height="53dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="13dp"
-            android:src="@drawable/ic_basket"
-            app:civ_circle_background_color="@color/gray2" />
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:src="@drawable/ic_basket"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -89,6 +93,7 @@
         style="@style/Widget.AppCompat.Button.IconOnly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="false"
         android:layout_centerVertical="true"
         android:layout_marginLeft="302dp"
         android:background="@drawable/shape_round_button"
@@ -104,7 +109,8 @@
         android:layout_width="320dp"
         android:layout_height="75dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/shape_corner_more_framgnet"
+        android:background="@drawable/ripple_menu_item_gray"
+        android:clickable="true"
         android:translationZ="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
@@ -115,8 +121,9 @@
             android:layout_height="53dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="13dp"
-            android:src="@drawable/ic_notifications"
-            app:civ_circle_background_color="@color/gray2" />
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:src="@drawable/ic_notifications"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -144,6 +151,7 @@
         android:id="@+id/btn_chevron_notifications"
         style="@style/Widget.AppCompat.Button.IconOnly"
         android:layout_width="wrap_content"
+        android:clickable="false"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="302dp"
@@ -160,7 +168,8 @@
         android:layout_width="320dp"
         android:layout_height="75dp"
         android:layout_marginTop="19dp"
-        android:background="@drawable/shape_corner_more_framgnet"
+        android:background="@drawable/ripple_menu_item_gray"
+        android:clickable="true"
         android:translationZ="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
@@ -171,8 +180,9 @@
             android:layout_height="53dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="13dp"
-            android:src="@drawable/ic_inbox2"
-            app:civ_circle_background_color="@color/gray2" />
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:src="@drawable/ic_inbox2" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -187,6 +197,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_chevron_inbox"
         style="@style/Widget.AppCompat.Button.IconOnly"
+        android:clickable="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -204,7 +215,8 @@
         android:layout_width="320dp"
         android:layout_height="75dp"
         android:layout_marginTop="19dp"
-        android:background="@drawable/shape_corner_more_framgnet"
+        android:background="@drawable/ripple_menu_item_gray"
+        android:clickable="true"
         android:translationZ="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
@@ -215,8 +227,9 @@
             android:layout_height="53dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="13dp"
-            android:src="@drawable/ic_info"
-            app:civ_circle_background_color="@color/gray2" />
+            android:background="@drawable/oval"
+            android:padding="8dp"
+            android:src="@drawable/ic_info" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -235,6 +248,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="302dp"
+        android:clickable="false"
         android:background="@drawable/shape_round_button"
         android:backgroundTint="@color/gray"
         android:drawableStart="@drawable/ic_baseline_chevron_right"

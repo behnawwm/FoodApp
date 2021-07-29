@@ -1,4 +1,4 @@
-package com.example.foodapp.ui.Home.fragments.menu
+package com.example.foodapp.ui.Home.fragments.menu.menuPreview
 
 import android.os.Bundle
 import android.view.*
@@ -9,10 +9,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodapp.R
 import com.example.foodapp.data.models.MenuPreviewItem
-import com.example.foodapp.data.models.OfferItem
-import com.example.foodapp.databinding.FragmentMenuBinding
 import com.example.foodapp.databinding.FragmentMenuPreviewBinding
-import com.example.foodapp.ui.Home.fragments.offers.OffersAdapter
 
 
 class MenuPreviewFragment : Fragment(R.layout.fragment_menu_preview),
@@ -39,7 +36,7 @@ class MenuPreviewFragment : Fragment(R.layout.fragment_menu_preview),
         return binding.root
     }
 
-    private fun provideTestDataSet(): MutableList<MenuPreviewItem>? {
+    private fun provideTestDataSet(): MutableList<MenuPreviewItem> {
         return mutableListOf(
             MenuPreviewItem(0, "Pizza", 4.8, 123, "Desserts", "Paris"),
             MenuPreviewItem(1, "Hamburger", 3.5, 231, "Fast Food", "London"),
@@ -65,6 +62,8 @@ class MenuPreviewFragment : Fragment(R.layout.fragment_menu_preview),
 
     override fun OnItemClick(item: MenuPreviewItem) {
         findNavController().navigate(R.id.action_menuPreviewFragment_to_foodPreviewFragment)
-
     }
+
+
+
 }

@@ -1,4 +1,4 @@
-package com.example.foodapp.ui.Home.fragments.menu
+package com.example.foodapp.ui.Home.fragments.menu.menuPreview
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

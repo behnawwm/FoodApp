@@ -1,6 +1,5 @@
-package com.example.foodapp.ui.Home.fragments.menu
+package com.example.foodapp.ui.Home.fragments.menu.foodPreview
 
-import android.graphics.Color
 import android.graphics.PorterDuff
 import android.os.Build
 import android.os.Bundle
@@ -8,7 +7,6 @@ import android.util.Log
 import android.view.*
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.foodapp.R
 import com.example.foodapp.databinding.FragmentFoodPreviewBinding
@@ -31,7 +29,7 @@ class FoodPreviewFragment : Fragment(R.layout.fragment_food_preview) {
         binding.apply {
 
             nestedScrollView.setOnTouchListener { view, motionEvent ->
-                if (motionEvent.action == 2) {
+                if (motionEvent.action == MotionEvent.ACTION_MOVE) {
                     spinner1.dismiss()
                     spinner2.dismiss()
                 }
@@ -50,7 +48,6 @@ class FoodPreviewFragment : Fragment(R.layout.fragment_food_preview) {
                 getSpinnerRecyclerView().layoutManager = LinearLayoutManager(context)
                 lifecycleOwner = this@FoodPreviewFragment
             }
-
             spinner2.apply {
                 setSpinnerAdapter(IconSpinnerAdapter(this))
                 setItems(
@@ -63,6 +60,7 @@ class FoodPreviewFragment : Fragment(R.layout.fragment_food_preview) {
                 getSpinnerRecyclerView().layoutManager = LinearLayoutManager(context)
                 lifecycleOwner = this@FoodPreviewFragment
             }
+
             btnPortionIncrease.setOnClickListener {
                 val number = tvNumberPortion.text.toString().toInt()
                 tvNumberPortion.text = (number + 1).toString()
@@ -104,7 +102,13 @@ class FoodPreviewFragment : Fragment(R.layout.fragment_food_preview) {
             }
         }
 
+        binding.toolbarFoodPreview.setOnMenuItemClickListener {
+            //todo
+            true
+        }
+        binding.toolbarFoodPreview.setNavigationOnClickListener {
+            requireActivity().onBackPressed()
+        }
         return binding.root
     }
-
 }

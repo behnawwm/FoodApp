@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="21dp"
+    android:paddingTop="?attr/actionBarSize"
+    android:paddingLeft="21dp"
+    android:paddingRight="21dp"
     tools:context=".ui.Home.fragments.menu.MenuFragment">
 
 

@@ -66,9 +66,9 @@
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout6" />
 
         <org.imaginativeworld.whynotimagecarousel.ImageCarousel
-            android:id="@+id/imageCarousel"
+            android:id="@+id/imageCarousel1"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="115dp"
             android:layout_marginLeft="-21dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="-21dp"
@@ -97,7 +97,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageCarousel" />
+            app:layout_constraintTop_toBottomOf="@+id/imageCarousel1" />
 
         <TextView
             android:id="@+id/btn_popular1_view_all_home"
@@ -137,8 +137,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="42dp"
-            android:text="Most Popular"
+            android:text="Featured Restaurants"
             android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageCarousel2" />
 
@@ -148,16 +149,32 @@
             android:layout_height="wrap_content"
             android:text="View All"
             android:textColor="@color/orange"
+            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView16"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <org.imaginativeworld.whynotimagecarousel.ImageCarousel
             android:id="@+id/imageCarousel3"
             android:layout_width="match_parent"
-            android:layout_height="115dp"
+            android:layout_height="185dp"
+            android:layout_marginLeft="-21dp"
             android:layout_marginTop="30dp"
+            android:layout_marginRight="-21dp"
+            app:autoWidthFixing="false"
+            app:carouselGravity="START"
+            app:carouselPaddingEnd="8dp"
+            app:carouselPaddingStart="8dp"
+            app:carouselType="SHOWCASE"
+            app:imageScaleType="centerCrop"
+            app:infiniteCarousel="false"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            app:scaleOnScroll="false"
+            app:showBottomShadow="false"
+            app:showCaption="false"
+            app:showIndicator="false"
+            app:showNavigationButtons="false"
+            app:showTopShadow="false" />
 
         <TextView
             android:id="@+id/textView18"

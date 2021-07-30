@@ -16,7 +16,8 @@ class MenuPreviewItemsAdapter(val listener: OnItemPressListener) :
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuPreviewItemsViewHolder {
-        val binding = ItemMenuPreviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemMenuPreviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
 
         return MenuPreviewItemsViewHolder(binding)
     }
@@ -45,20 +46,26 @@ class MenuPreviewItemsAdapter(val listener: OnItemPressListener) :
 
         fun bind(item: MenuPreviewItem) {
             binding.apply {
-                Glide.with(itemView)
-//                    .load(item.url)
-                    .load(R.drawable.photo_pizza)
-                    .centerCrop()
-                    .transition(DrawableTransitionOptions.withCrossFade())
-                    .error(R.drawable.photo_pizza)
-                    .into(binding.imageView)
+                if (item.url == "")
+                    Glide.with(itemView)
+                        .load(item.photoDrawable)
+                        .centerCrop()
+                        .transition(DrawableTransitionOptions.withCrossFade())
+                        .error(R.drawable.photo_pizza)
+                        .into(binding.imageView)
+                else
+                    Glide.with(itemView)
+                        .load(item.url)
+                        .centerCrop()
+                        .transition(DrawableTransitionOptions.withCrossFade())
+                        .error(R.drawable.photo_pizza)
+                        .into(binding.imageView)
+
 
                 tvCategory.text = item.category
                 tvRatings.text = item.rating.toString()
                 tvTitle.text = item.title
-                tvRatingsNumber.text = "(${item.numOfRatings} ratings)"
                 tvDesc.text = item.location
-
             }
         }
     }
@@ -73,7 +80,10 @@ class MenuPreviewItemsAdapter(val listener: OnItemPressListener) :
             newItem.id == oldItem.id
 
 
-        override fun areContentsTheSame(oldItem: MenuPreviewItem, newItem: MenuPreviewItem): Boolean =
+        override fun areContentsTheSame(
+            oldItem: MenuPreviewItem,
+            newItem: MenuPreviewItem
+        ): Boolean =
             newItem == oldItem
 
     }

@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodapp.R
+import com.example.foodapp.data.TestDataSet
 import com.example.foodapp.data.models.OfferItem
 import com.example.foodapp.databinding.FragmentOffersBinding
 
@@ -25,7 +26,7 @@ class OffersFragment : Fragment(R.layout.fragment_offers), OffersAdapter.OnItemP
         binding = FragmentOffersBinding.inflate(inflater)
 
         val offersAdapter = OffersAdapter(this).apply {
-            submitList(provideTestDataSet())
+            submitList(TestDataSet.provideOffersTestDataSet())
         }
         binding.apply {
             rvOffers.setHasFixedSize(true)
@@ -34,7 +35,7 @@ class OffersFragment : Fragment(R.layout.fragment_offers), OffersAdapter.OnItemP
 
             btnCheckOffers.setOnClickListener {
                 offersAdapter.submitList(
-                    provideTestDataSet()
+                    TestDataSet.provideOffersTestDataSet()
                 )
                 binding.rvOffers.adapter = offersAdapter
             }
@@ -44,15 +45,6 @@ class OffersFragment : Fragment(R.layout.fragment_offers), OffersAdapter.OnItemP
         return binding.root
     }
 
-    private fun provideTestDataSet(): MutableList<OfferItem>? {
-        return mutableListOf(
-            OfferItem(0, "Pizza", 4.8, 123, "Desserts", "Paris"),
-            OfferItem(1, "Hamburger", 3.5, 231, "Fast Food", "London"),
-            OfferItem(2, "Hotdog", 2.1, 3, "Cafe", "Paris"),
-            OfferItem(3, "Salad", 4.9, 41, "Cafe", "Paris"),
-            OfferItem(4, "Beverages", 3.9, 2309, "Cafe", "Paris"),
-        )
-    }
 
     private fun initRecyclerDivider(): RecyclerView.ItemDecoration {
         val divider = DividerItemDecoration(

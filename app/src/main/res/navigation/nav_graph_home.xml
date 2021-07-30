@@ -56,7 +56,7 @@
     <fragment
         android:id="@+id/menuPreviewFragment"
         android:name="com.example.foodapp.ui.Home.fragments.menu.menuPreview.MenuPreviewFragment"
-        android:label="MenuPreviewFragment"
+        android:label="{selectedMenuTitle}"
         tools:layout="@layout/fragment_menu_preview">
         <action
             android:id="@+id/action_menuPreviewFragment_to_foodPreviewFragment"
@@ -65,10 +65,17 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <argument
+            android:name="selectedMenuTitle"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/foodPreviewFragment"
         android:name="com.example.foodapp.ui.Home.fragments.menu.foodPreview.FoodPreviewFragment"
         android:label="FoodPreviewFragment"
-        tools:layout="@layout/fragment_food_preview" />
+        tools:layout="@layout/fragment_food_preview" >
+        <argument
+            android:name="selectedMenuPreviewItem"
+            app:argType="com.example.foodapp.data.models.MenuPreviewItem" />
+    </fragment>
 </navigation>

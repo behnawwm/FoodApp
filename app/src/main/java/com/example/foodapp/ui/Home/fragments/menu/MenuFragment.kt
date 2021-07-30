@@ -21,30 +21,30 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
         setHasOptionsMenu(true)
 
         binding.apply {
-            btnChevronPromotions.setOnClickListener {
-                findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
+            btnChevronAppetizers.setOnClickListener {
+                findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToMenuPreviewFragment(tvTitleAppetizers.text.toString()))
             }
             btnChevronDesserts.setOnClickListener {
-                findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
+                findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToMenuPreviewFragment(tvTitleDesserts.text.toString()))
             }
             btnChevronFood.setOnClickListener {
-                findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
+                findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToMenuPreviewFragment(tvTitleFoods.text.toString()))
             }
             btnChevronBeverages.setOnClickListener {
-                findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
+                findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToMenuPreviewFragment(tvTitleBeverages.text.toString()))
             }
 
             view11.setOnClickListener {
-                findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
+                findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToMenuPreviewFragment(tvTitleFoods.text.toString()))
             }
             view21.setOnClickListener {
-                findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
+                findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToMenuPreviewFragment(tvTitleBeverages.text.toString()))
             }
             view31.setOnClickListener {
-                findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
+                findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToMenuPreviewFragment(tvTitleDesserts.text.toString()))
             }
             view41.setOnClickListener {
-                findNavController().navigate(R.id.action_menuFragment_to_menuPreviewFragment)
+                findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToMenuPreviewFragment(tvTitleAppetizers.text.toString()))
             }
 
         }

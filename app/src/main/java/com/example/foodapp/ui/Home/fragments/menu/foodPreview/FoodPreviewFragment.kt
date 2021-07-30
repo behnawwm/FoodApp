@@ -7,9 +7,11 @@ import android.util.Log
 import android.view.*
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.foodapp.R
 import com.example.foodapp.databinding.FragmentFoodPreviewBinding
+import com.example.foodapp.ui.Home.fragments.menu.menuPreview.MenuPreviewFragmentArgs
 import com.skydoves.powerspinner.IconSpinnerAdapter
 import com.skydoves.powerspinner.IconSpinnerItem
 
@@ -17,6 +19,7 @@ import com.skydoves.powerspinner.IconSpinnerItem
 class FoodPreviewFragment : Fragment(R.layout.fragment_food_preview) {
     lateinit var binding: FragmentFoodPreviewBinding
     private var isFabActive = false
+    private val args: FoodPreviewFragmentArgs by navArgs()
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateView(
@@ -35,7 +38,13 @@ class FoodPreviewFragment : Fragment(R.layout.fragment_food_preview) {
                 }
                 false
             }
-
+            ///
+            ivFoodPreview.setImageResource(args.selectedMenuPreviewItem.photoDrawable)
+            tvTitle.text = args.selectedMenuPreviewItem.title
+            ratingBar.rating = args.selectedMenuPreviewItem.rating.toFloat()
+            tvFoodPrice.text = "$ " + args.selectedMenuPreviewItem.price.toString()
+            tvTotalPrice.text = "$ " + args.selectedMenuPreviewItem.price.toString()
+            ///
             spinner1.apply {
                 setSpinnerAdapter(IconSpinnerAdapter(this))
                 setItems(
@@ -62,13 +71,16 @@ class FoodPreviewFragment : Fragment(R.layout.fragment_food_preview) {
             }
 
             btnPortionIncrease.setOnClickListener {
-                val number = tvNumberPortion.text.toString().toInt()
-                tvNumberPortion.text = (number + 1).toString()
+                val number = tvNumberPortion.text.toString().toInt() + 1
+                tvNumberPortion.text = number.toString()
+                tvTotalPrice.text = "$ " + (args.selectedMenuPreviewItem.price * number)
             }
             btnPortionDecrease.setOnClickListener {
-                val number = tvNumberPortion.text.toString().toInt()
-                if (number > 1)
-                    tvNumberPortion.text = (number - 1).toString()
+                val number = tvNumberPortion.text.toString().toInt() - 1
+                if (number > 0) {
+                    tvNumberPortion.text = number.toString()
+                    tvTotalPrice.text = "$ " + (args.selectedMenuPreviewItem.price * number)
+                }
             }
 
             fabFoodPreview.setOnClickListener {    //todo beautification -> extract view util function

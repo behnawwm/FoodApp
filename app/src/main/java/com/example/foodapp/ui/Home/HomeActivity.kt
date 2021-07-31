@@ -16,6 +16,7 @@ import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.foodapp.R
+import com.example.foodapp.Utils.ContextUtils.showWarningToasty
 import com.example.foodapp.databinding.ActivityHomeBinding
 import com.github.dhaval2404.imagepicker.ImagePicker
 
@@ -82,9 +83,9 @@ class HomeActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            onBackPressed()
-            return true
+        when (item.itemId) {
+            android.R.id.home -> onBackPressed()
+            R.id.cart -> baseContext.showWarningToasty("Not implemented yet!")
         }
         return true
     }

@@ -29,7 +29,7 @@ class MenuPreviewFragment : Fragment(R.layout.fragment_menu_preview),
         val offersAdapter = MenuPreviewItemsAdapter(this).apply {
             when (args.selectedMenuTitle) {
                 "Foods" -> submitList(TestDataSet.provideFoodTestDataSet())
-                "Deserts" -> submitList(TestDataSet.provideDessertsTestDataSet())
+                "Desserts" -> submitList(TestDataSet.provideDessertsTestDataSet())
                 "Beverages" -> submitList(TestDataSet.provideBeveragesTestDataSet())
                 "Appetizers" -> submitList(TestDataSet.provideAppetizersTestDataSet())
             }
@@ -53,7 +53,7 @@ class MenuPreviewFragment : Fragment(R.layout.fragment_menu_preview),
         divider.setDrawable(
             ContextCompat.getDrawable(
                 requireContext(),
-                R.drawable.shape_divider
+                R.drawable.shape_divider_4dp
             )!!
         )
         return divider

@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.foodapp.R
+import com.example.foodapp.Utils.ContextUtils.showWarningToasty
 import com.example.foodapp.databinding.FragmentProfileBinding
 import com.github.dhaval2404.imagepicker.ImagePicker
 
@@ -31,6 +32,9 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
                     .start()
             }
 
+            btnEditProfile.setOnClickListener {
+                context.showWarningToasty("Not implemented yet!")
+            }
 
         }
 

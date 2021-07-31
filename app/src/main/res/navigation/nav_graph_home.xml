@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.foodapp.ui.Home.fragments.HomeFragment"
+        android:name="com.example.foodapp.ui.Home.fragments.home.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment

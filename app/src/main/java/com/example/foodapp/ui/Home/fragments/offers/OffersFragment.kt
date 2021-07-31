@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodapp.R
+import com.example.foodapp.Utils.ContextUtils.showWarningToasty
 import com.example.foodapp.data.TestDataSet
 import com.example.foodapp.data.models.OfferItem
 import com.example.foodapp.databinding.FragmentOffersBinding
@@ -54,14 +55,15 @@ class OffersFragment : Fragment(R.layout.fragment_offers), OffersAdapter.OnItemP
         divider.setDrawable(
             ContextCompat.getDrawable(
                 requireContext(),
-                R.drawable.shape_divider
+                R.drawable.shape_divider_4dp
             )!!
         )
         return divider
     }
 
     override fun OnItemClick(item: OfferItem) {
-        Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
+        context.showWarningToasty("Not implemented yet!")
+
         //todo
     }
 }

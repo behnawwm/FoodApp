@@ -1,15 +1,14 @@
-package com.example.foodapp.ui.Home.fragments
+package com.example.foodapp.ui.Home.fragments.home
 
-import android.app.Activity
-import android.content.Intent
-import android.location.Address
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.example.foodapp.R
 import com.example.foodapp.databinding.FragmentHomeBinding
@@ -18,15 +17,13 @@ import com.example.foodapp.databinding.ItemCustomFixedSizeLayout2Binding
 import com.google.android.material.bottomappbar.BottomAppBar
 import org.imaginativeworld.whynotimagecarousel.listener.CarouselListener
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
-import org.imaginativeworld.whynotimagecarousel.utils.setImage
 import kotlin.random.Random
-import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.maps.model.LatLng
-import com.schibstedspain.leku.*
-import com.schibstedspain.leku.locale.SearchZoneRect
+import com.example.foodapp.data.TestDataSet
+import com.example.foodapp.data.models.OfferItem
+import org.imaginativeworld.whynotimagecarousel.utils.setImage
 
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class HomeFragment : Fragment(R.layout.fragment_home), RecentItemsAdapter.OnItemPressListener {
     lateinit var binding: FragmentHomeBinding
     private val MAP_BUTTON_REQUEST_CODE = 123
 
@@ -187,6 +184,24 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.imageCarousel3.setData(listCarousel3)
 
 
+        ////// Recycler view Recent
+
+        val recentAdapter = RecentItemsAdapter(this).apply {
+            submitList(TestDataSet.provideOffersTestDataSet().take(3))
+        }
+        binding.apply {
+            rvRecentHome.setHasFixedSize(true)
+            rvRecentHome.adapter = recentAdapter
+            rvRecentHome.addItemDecoration(initRecyclerDivider())
+
+            rvRecentHome.setOnClickListener {
+                recentAdapter.submitList(
+                    TestDataSet.provideOffersTestDataSet()
+                )
+                binding.rvRecentHome.adapter = recentAdapter
+            }
+        }
+
         ////// location picker
 //        binding.rlLocationSelectHome.setOnClickListener {
 //            val locationPickerIntent = LocationPickerActivity.Builder()
@@ -220,6 +235,24 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
 
         return binding.root
+    }
+
+    override fun OnItemClick(item: OfferItem) {
+        TODO("Not yet implemented")
+    }
+
+    private fun initRecyclerDivider(): RecyclerView.ItemDecoration {
+        val divider = DividerItemDecoration(
+            requireContext(),
+            DividerItemDecoration.VERTICAL
+        )
+        divider.setDrawable(
+            ContextCompat.getDrawable(
+                requireContext(),
+                R.drawable.shape_divider_10dp
+            )!!
+        )
+        return divider
     }
 
 //    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

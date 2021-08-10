@@ -29,7 +29,7 @@ This project is based on MVVM architecture, using following tech-stacks:
 - [Circle Indicator](https://github.com/ongakuer/CircleIndicator)
 
 ## How to use?
-Build & install or [Get .APK](https://github.com/behnawwm/foodapp/raw/master/Apk/FoodApp.apk)
+Build & install or [Get .APK](https://github.com/behnawwm/foodapp/raw/master/apk/FoodApp.apk)
 
 
 ## Screenshots:

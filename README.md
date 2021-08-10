@@ -6,21 +6,27 @@ In this app I focused on implementing an interactive & beautiful design for a sa
 It's still an uncomplete project but good enough for my purpose!
 
 
-## Features
+<!-- ## Features
 - Saving photo to external storage
-- viewing saved & favorite photos (todo)
+- viewing saved & favorite photos (todo) -->
 
 ## Tech stack & Open-source libraries
 This project is based on MVVM architecture, using following tech-stacks:
 - Jetpack
-  - Navigation Component
-  - Hilt
-  - Paging 3
   - Lifecycle
   - View Binding
-- Retrofit
+  - Navigation Component
+  - Hilt (todo api)
+  - Retrofit (todo api)
 - Glide
 - Coroutines
+- [Image Carousel](https://github.com/ImaginativeShohag/Why-Not-Image-Carousel)
+- [OTP View](https://github.com/mukeshsolanki/android-otpview-pinview)
+- [Circle Image View](https://github.com/hdodenhof/CircleImageView)
+- [Power Spinner](https://github.com/skydoves/PowerSpinner)
+- [Image Picker](https://github.com/Dhaval2404/ImagePicker)
+- [Toasty](https://github.com/GrenderG/Toasty)
+- 
 
 ## How to use?
 Build & install or [Get .APK](https://github.com/behnawwm/foodapp/raw/master/Apk/FoodApp.apk)
@@ -54,5 +60,6 @@ This app is based on MVVM architecture and a repository pattern.
 
 ## Credits
 Main design by: [Akila Weerakoon](https://www.behance.net/akilaweerakoon)
+
 Logo by: [Omnium](https://dribbble.com/omniumstudio)
 

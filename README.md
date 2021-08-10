@@ -26,7 +26,7 @@ This project is based on MVVM architecture, using following tech-stacks:
 - [Power Spinner](https://github.com/skydoves/PowerSpinner)
 - [Image Picker](https://github.com/Dhaval2404/ImagePicker)
 - [Toasty](https://github.com/GrenderG/Toasty)
-- 
+- [Circle Indicator](https://github.com/ongakuer/CircleIndicator)
 
 ## How to use?
 Build & install or [Get .APK](https://github.com/behnawwm/foodapp/raw/master/Apk/FoodApp.apk)

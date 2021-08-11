@@ -19,10 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodApp">
         <activity android:name=".ui.Home.HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".ui.Intro.IntroActivity">
 
@@ -31,7 +28,10 @@
             android:name=".ui.Login.LoginActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ui.SplashActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity

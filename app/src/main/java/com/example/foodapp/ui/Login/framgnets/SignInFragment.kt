@@ -15,6 +15,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.foodapp.ui.Intro.IntroActivity
 import com.example.foodapp.R
 import com.example.foodapp.databinding.FragmentSigninBinding
+import com.example.foodapp.ui.Home.HomeActivity
 
 
 class SignInFragment : Fragment(R.layout.fragment_signin) {
@@ -34,13 +35,16 @@ class SignInFragment : Fragment(R.layout.fragment_signin) {
                 findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
             }
             btnLogin.setOnClickListener {
-                startActivity(Intent(requireActivity(), IntroActivity::class.java))
+                startActivity(Intent(requireActivity(), HomeActivity::class.java))
+                requireActivity().finish()
             }
             btnLoginFacebook.setOnClickListener {
-                startActivity(Intent(requireActivity(), IntroActivity::class.java))
+                startActivity(Intent(requireActivity(), HomeActivity::class.java))
+                requireActivity().finish()
             }
             btnLoginGoogle.setOnClickListener {
-                startActivity(Intent(requireActivity(), IntroActivity::class.java))
+                startActivity(Intent(requireActivity(), HomeActivity::class.java))
+                requireActivity().finish()
             }
             tvForgotPassword.setOnClickListener {
                 findNavController().navigate(R.id.action_signInFragment_to_forgotPasswordFragment)

@@ -9,6 +9,7 @@ import com.example.foodapp.ui.Home.HomeActivity
 import com.example.foodapp.R
 import com.example.foodapp.data.models.IntroSliderData
 import com.example.foodapp.databinding.ActivityIntroBinding
+import com.example.foodapp.ui.Login.LoginActivity
 import org.imaginativeworld.whynotimagecarousel.listener.CarouselOnScrollListener
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
@@ -66,8 +67,9 @@ class IntroActivity : AppCompatActivity() {
             }
 
             btnIntroNext.setOnClickListener {
-                if (carousel.currentPosition - 1073741823 == 2) {  //todo library bug
-                    startActivity(Intent(this@IntroActivity, HomeActivity::class.java))
+                if (carousel.currentPosition % introDataSet.size == 2) {  //todo library bug
+                    startActivity(Intent(this@IntroActivity, LoginActivity::class.java))
+                    finish()
                 } else
                     carousel.currentPosition++
 
@@ -76,7 +78,7 @@ class IntroActivity : AppCompatActivity() {
 
     }
 
-    fun provideTestIntroDataSet(): List<IntroSliderData> {
+    private fun provideTestIntroDataSet(): List<IntroSliderData> {
         return listOf(
             IntroSliderData(
                 1,

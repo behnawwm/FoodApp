@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import androidx.lifecycle.lifecycleScope
 import com.example.foodapp.R
+import com.example.foodapp.ui.Intro.IntroActivity
 import com.example.foodapp.ui.Login.LoginActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -22,7 +23,8 @@ class SplashActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             delay(500)
-            startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+            startActivity(Intent(this@SplashActivity, IntroActivity::class.java))
+            finish()
         }
 
     }

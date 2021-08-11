@@ -29,8 +29,4 @@ class LoginActivity : AppCompatActivity() {
         navController = navHostFragment.findNavController()
 
     }
-
-    override fun onBackPressed() {
-        //disable going to splash screen
-    }
 }

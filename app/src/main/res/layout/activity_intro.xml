@@ -8,6 +8,7 @@
 
     <org.imaginativeworld.whynotimagecarousel.ImageCarousel
         android:id="@+id/carousel"
+        android:nestedScrollingEnabled="false"
         android:layout_width="225dp"
         app:showCaption="false"
         android:layout_height="300dp"

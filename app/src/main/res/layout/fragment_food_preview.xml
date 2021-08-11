@@ -32,8 +32,8 @@
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar_food_preview"
                 android:layout_width="match_parent"
-                android:clickable="true"
                 android:layout_height="?attr/actionBarSize"
+                android:clickable="true"
                 app:layout_collapseMode="pin"
                 app:menu="@menu/menu_menu"
                 app:navigationIcon="?attr/homeAsUpIndicator" />
@@ -212,6 +212,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:clipToPadding="false"
                 android:orientation="horizontal"
                 android:padding="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -265,80 +266,88 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <View
-                    android:id="@+id/view_white_middle"
-                    android:layout_width="277dp"
-                    android:layout_height="122dp"
-                    android:layout_marginLeft="54dp"
-                    android:background="@drawable/shape_menu_categories"
-                    android:elevation="1dp"
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:padding="4dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginBottom="2dp"
-                    android:elevation="2dp"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    app:layout_constraintStart_toStartOf="@id/view_white_middle"
-                    app:layout_constraintTop_toTopOf="@id/view_white_middle">
+                    <View
+                        android:id="@+id/view_white_middle"
+                        android:layout_width="match_parent"
+                        android:layout_height="122dp"
+                        android:layout_marginLeft="54dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/shape_menu_categories"
+                        android:elevation="1dp" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="2dp"
+                        android:elevation="2dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="@id/view_white_middle"
+                        app:layout_constraintTop_toTopOf="@id/view_white_middle">
 
-                        android:text="Total Price"
-                        android:textSize="12sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Price"
+                            android:textSize="12sp" />
 
-                    <TextView
-                        android:id="@+id/tv_total_price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="$ 14.99"
-                        android:textSize="21sp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tv_total_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="$ 14.99"
+                            android:textSize="21sp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_filled_oval_orange"
+                            android:drawableLeft="@drawable/ic_cart"
+                            android:drawablePadding="18dp"
+                            android:drawableTint="@color/white"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="6dp"
+                            android:paddingRight="17dp"
+                            android:paddingBottom="6dp"
+                            android:text="Add to Cart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
 
                     <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_cart"
+                        style="@style/Widget.AppCompat.Button.IconOnly"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/bg_filled_oval_orange"
-                        android:drawableLeft="@drawable/ic_cart"
-                        android:drawablePadding="18dp"
-                        android:drawableTint="@color/white"
-                        android:paddingLeft="17dp"
-                        android:paddingTop="6dp"
-                        android:paddingRight="17dp"
-                        android:paddingBottom="6dp"
-                        android:text="Add to Cart"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="-48dp"
+                        android:layout_toRightOf="@id/view_white_middle"
+                        android:background="@drawable/shape_round_button"
+                        android:backgroundTint="@color/white"
+                        android:drawableStart="@drawable/ic_cart"
+                        android:drawableTint="@color/orange"
+                        android:elevation="3dp"
+                        android:padding="6dp"
+                        android:translationZ="2dp" />
+                </RelativeLayout>
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_cart"
-                    style="@style/Widget.AppCompat.Button.IconOnly"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="320dp"
-                    android:background="@drawable/shape_round_button"
-                    android:backgroundTint="@color/white"
-                    android:drawableStart="@drawable/ic_cart"
-                    android:drawableTint="@color/orange"
-                    android:elevation="3dp"
-                    android:padding="6dp"
-                    android:translationZ="2dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

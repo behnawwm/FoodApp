@@ -4,258 +4,303 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize"
+    android:layout_marginTop="30dp"
+    android:clipToPadding="false"
     android:paddingLeft="21dp"
+    android:paddingTop="?attr/actionBarSize"
     android:paddingRight="21dp"
     tools:context=".ui.Home.fragments.menu.MenuFragment">
 
-
     <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="320dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/ripple_menu_item_gray"
-        android:clickable="true"
-        android:translationZ="2dp"
+        android:id="@+id/rl1_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:padding="4dp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_payment_more"
-            style="@style/customWhiteFab"
-            android:layout_width="53dp"
-            android:layout_height="53dp"
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="13dp"
-            android:background="@drawable/oval"
-            android:padding="8dp"
-            android:src="@drawable/ic_payment" />
+            android:layout_marginRight="18dp"
+            android:background="@drawable/ripple_menu_item_gray"
+            android:clickable="true"
+            android:translationZ="2dp">
 
-        <TextView
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_payment_more"
+                style="@style/customWhiteFab"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:background="@drawable/oval"
+                android:padding="8dp"
+                android:src="@drawable/ic_payment" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_payment_more"
+                android:text="Payment Details" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_chevron_payment"
+            style="@style/Widget.AppCompat.Button.IconOnly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/iv_payment_more"
-            android:text="Payment Details" />
+            android:layout_marginLeft="-30dp"
+            android:layout_toRightOf="@id/relativeLayout1"
+            android:background="@drawable/shape_round_button"
+            android:backgroundTint="@color/gray"
+            android:clickable="false"
+            android:drawableStart="@drawable/ic_baseline_chevron_right"
+            android:padding="6dp" />
 
     </RelativeLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_chevron_payment"
-        style="@style/Widget.AppCompat.Button.IconOnly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:clickable="false"
-        android:layout_marginLeft="302dp"
-        android:background="@drawable/shape_round_button"
-        android:backgroundTint="@color/gray"
-        android:drawableStart="@drawable/ic_baseline_chevron_right"
-        android:padding="6dp"
-        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout1"
-        app:layout_constraintStart_toStartOf="@+id/relativeLayout1"
-        app:layout_constraintTop_toTopOf="@+id/relativeLayout1" />
-
-
     <RelativeLayout
-        android:id="@id/relativeLayout2"
-        android:layout_width="320dp"
-        android:layout_height="75dp"
+        android:id="@+id/rl2_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
-        android:background="@drawable/ripple_menu_item_gray"
-        android:clickable="true"
-        android:translationZ="2dp"
+        android:clipToPadding="false"
+        android:padding="4dp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1">
+        app:layout_constraintTop_toBottomOf="@id/rl1_more">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_orders_more"
-            android:layout_width="53dp"
-            android:layout_height="53dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="13dp"
-            android:background="@drawable/oval"
-            android:padding="8dp"
-            android:src="@drawable/ic_basket"/>
+        <RelativeLayout
+            android:id="@id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/ripple_menu_item_gray"
+            android:clickable="true"
+            android:translationZ="2dp">
 
-        <TextView
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_orders_more"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:background="@drawable/oval"
+                android:padding="8dp"
+                android:src="@drawable/ic_basket" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_orders_more"
+                android:text="My Orders" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_chevron_orders"
+            style="@style/Widget.AppCompat.Button.IconOnly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/iv_orders_more"
-            android:text="My Orders" />
-
+            android:layout_marginLeft="-30dp"
+            android:layout_toRightOf="@id/relativeLayout2"
+            android:background="@drawable/shape_round_button"
+            android:backgroundTint="@color/gray"
+            android:clickable="false"
+            android:drawableStart="@drawable/ic_baseline_chevron_right"
+            android:padding="6dp" />
     </RelativeLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_chevron_orders"
-        style="@style/Widget.AppCompat.Button.IconOnly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="302dp"
-        android:background="@drawable/shape_round_button"
-        android:backgroundTint="@color/gray"
-        android:drawableStart="@drawable/ic_baseline_chevron_right"
-        android:padding="6dp"
-        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout2"
-        app:layout_constraintStart_toStartOf="@+id/relativeLayout2"
-        app:layout_constraintTop_toTopOf="@+id/relativeLayout2" />
-
     <RelativeLayout
-        android:id="@id/relativeLayout3"
-        android:layout_width="320dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/ripple_menu_item_gray"
-        android:clickable="true"
-        android:translationZ="2dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_notifications_more"
-            android:layout_width="53dp"
-            android:layout_height="53dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="13dp"
-            android:background="@drawable/oval"
-            android:padding="8dp"
-            android:src="@drawable/ic_notifications"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/iv_notifications_more"
-            android:text="Notifications" />
-
-        <TextView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="24dp"
-            android:background="@drawable/shape_circle"
-            android:gravity="center"
-            android:text="5"
-            android:textColor="@color/white"
-            android:textSize="12sp" />
-
-    </RelativeLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_chevron_notifications"
-        style="@style/Widget.AppCompat.Button.IconOnly"
-        android:layout_width="wrap_content"
-        android:clickable="false"
+        android:id="@+id/rl3_more"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="302dp"
-        android:background="@drawable/shape_round_button"
-        android:backgroundTint="@color/gray"
-        android:drawableStart="@drawable/ic_baseline_chevron_right"
-        android:padding="6dp"
-        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout3"
-        app:layout_constraintStart_toStartOf="@+id/relativeLayout3"
-        app:layout_constraintTop_toTopOf="@+id/relativeLayout3" />
-
-    <RelativeLayout
-        android:id="@id/relativeLayout4"
-        android:layout_width="320dp"
-        android:layout_height="75dp"
         android:layout_marginTop="19dp"
-        android:background="@drawable/ripple_menu_item_gray"
-        android:clickable="true"
-        android:translationZ="2dp"
+        android:clipToPadding="false"
+        android:padding="4dp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
+        app:layout_constraintTop_toBottomOf="@id/rl2_more">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_inbox_more"
-            android:layout_width="53dp"
-            android:layout_height="53dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="13dp"
-            android:background="@drawable/oval"
-            android:padding="8dp"
-            android:src="@drawable/ic_inbox2" />
+        <RelativeLayout
+            android:id="@id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/ripple_menu_item_gray"
+            android:clickable="true"
+            android:translationZ="2dp">
 
-        <TextView
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_notifications_more"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:background="@drawable/oval"
+                android:padding="8dp"
+                android:src="@drawable/ic_notifications" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_notifications_more"
+                android:text="Notifications" />
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/shape_circle"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_chevron_notifications"
+            style="@style/Widget.AppCompat.Button.IconOnly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/iv_inbox_more"
-            android:text="Inbox" />
+            android:layout_marginLeft="-30dp"
+            android:layout_toRightOf="@id/relativeLayout3"
+            android:background="@drawable/shape_round_button"
+            android:backgroundTint="@color/gray"
+            android:clickable="false"
+            android:drawableStart="@drawable/ic_baseline_chevron_right"
+            android:padding="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/relativeLayout3" />
 
     </RelativeLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_chevron_inbox"
-        style="@style/Widget.AppCompat.Button.IconOnly"
-        android:clickable="false"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="302dp"
-        android:background="@drawable/shape_round_button"
-        android:backgroundTint="@color/gray"
-        android:drawableStart="@drawable/ic_baseline_chevron_right"
-        android:padding="6dp"
-        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout4"
-        app:layout_constraintStart_toStartOf="@+id/relativeLayout4"
-        app:layout_constraintTop_toTopOf="@+id/relativeLayout4" />
 
     <RelativeLayout
-        android:id="@id/relativeLayout5"
-        android:layout_width="320dp"
-        android:layout_height="75dp"
+        android:id="@+id/rl4_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
-        android:background="@drawable/ripple_menu_item_gray"
-        android:clickable="true"
-        android:translationZ="2dp"
+        android:clipToPadding="false"
+        android:padding="4dp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
+        app:layout_constraintTop_toBottomOf="@id/rl3_more">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_aboutus_more"
-            android:layout_width="53dp"
-            android:layout_height="53dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="13dp"
-            android:background="@drawable/oval"
-            android:padding="8dp"
-            android:src="@drawable/ic_info" />
+        <RelativeLayout
+            android:id="@id/relativeLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/ripple_menu_item_gray"
+            android:clickable="true"
+            android:translationZ="2dp">
 
-        <TextView
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_inbox_more"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:background="@drawable/oval"
+                android:padding="8dp"
+                android:src="@drawable/ic_inbox2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_inbox_more"
+                android:text="Inbox" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_chevron_inbox"
+            style="@style/Widget.AppCompat.Button.IconOnly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/iv_aboutus_more"
-            android:text="About US" />
+            android:layout_marginLeft="-30dp"
+            android:layout_toRightOf="@id/relativeLayout4"
+            android:background="@drawable/shape_round_button"
+            android:backgroundTint="@color/gray"
+            android:clickable="false"
+            android:drawableStart="@drawable/ic_baseline_chevron_right"
+            android:padding="6dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl5_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:clipToPadding="false"
+        android:padding="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl4_more">
+
+        <RelativeLayout
+            android:id="@id/relativeLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/ripple_menu_item_gray"
+            android:clickable="true"
+            android:translationZ="2dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_aboutus_more"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:background="@drawable/oval"
+                android:padding="8dp"
+                android:src="@drawable/ic_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/iv_aboutus_more"
+                android:text="About US" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_chevron_aboutus"
+            style="@style/Widget.AppCompat.Button.IconOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-30dp"
+            android:layout_toRightOf="@id/relativeLayout5"
+            android:background="@drawable/shape_round_button"
+            android:backgroundTint="@color/gray"
+            android:clickable="false"
+            android:drawableStart="@drawable/ic_baseline_chevron_right"
+            android:padding="6dp" />
 
     </RelativeLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_chevron_aboutus"
-        style="@style/Widget.AppCompat.Button.IconOnly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="302dp"
-        android:clickable="false"
-        android:background="@drawable/shape_round_button"
-        android:backgroundTint="@color/gray"
-        android:drawableStart="@drawable/ic_baseline_chevron_right"
-        android:padding="6dp"
-        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout5"
-        app:layout_constraintStart_toStartOf="@+id/relativeLayout5"
-        app:layout_constraintTop_toTopOf="@+id/relativeLayout5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

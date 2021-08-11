@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.foodapp.R
+import com.example.foodapp.Utils.ViewUtils.setFabIcon
 import com.example.foodapp.databinding.FragmentFoodPreviewBinding
 import com.example.foodapp.ui.Home.fragments.menu.menuPreview.MenuPreviewFragmentArgs
 import com.skydoves.powerspinner.IconSpinnerAdapter
@@ -30,6 +31,14 @@ class FoodPreviewFragment : Fragment(R.layout.fragment_food_preview) {
         binding = FragmentFoodPreviewBinding.inflate(inflater)
 
         binding.apply {
+            ivFoodPreview.setImageResource(args.selectedMenuPreviewItem.photoDrawable)
+            tvTitle.text = args.selectedMenuPreviewItem.title
+            ratingBar.rating = args.selectedMenuPreviewItem.rating.toFloat()
+            tvFoodPrice.text = "$ " + args.selectedMenuPreviewItem.price.toString()
+            tvTotalPrice.text = "$ " + args.selectedMenuPreviewItem.price.toString()
+
+            setUpSpinner1()
+            setUpSpinner2()
 
             nestedScrollView.setOnTouchListener { view, motionEvent ->
                 if (motionEvent.action == MotionEvent.ACTION_MOVE) {
@@ -37,37 +46,6 @@ class FoodPreviewFragment : Fragment(R.layout.fragment_food_preview) {
                     spinner2.dismiss()
                 }
                 false
-            }
-            ///
-            ivFoodPreview.setImageResource(args.selectedMenuPreviewItem.photoDrawable)
-            tvTitle.text = args.selectedMenuPreviewItem.title
-            ratingBar.rating = args.selectedMenuPreviewItem.rating.toFloat()
-            tvFoodPrice.text = "$ " + args.selectedMenuPreviewItem.price.toString()
-            tvTotalPrice.text = "$ " + args.selectedMenuPreviewItem.price.toString()
-            ///
-            spinner1.apply {
-                setSpinnerAdapter(IconSpinnerAdapter(this))
-                setItems(
-                    arrayListOf(
-                        IconSpinnerItem(text = "Big Portion"),
-                        IconSpinnerItem(text = "Normal Portion"),
-                        IconSpinnerItem(text = "Small Portion")
-                    )
-                )
-                getSpinnerRecyclerView().layoutManager = LinearLayoutManager(context)
-                lifecycleOwner = this@FoodPreviewFragment
-            }
-            spinner2.apply {
-                setSpinnerAdapter(IconSpinnerAdapter(this))
-                setItems(
-                    arrayListOf(
-                        IconSpinnerItem(text = "Normal"),
-                        IconSpinnerItem(text = "No Veggies"),
-                        IconSpinnerItem(text = "No Sausages")
-                    )
-                )
-                getSpinnerRecyclerView().layoutManager = LinearLayoutManager(context)
-                lifecycleOwner = this@FoodPreviewFragment
             }
 
             btnPortionIncrease.setOnClickListener {
@@ -83,44 +61,66 @@ class FoodPreviewFragment : Fragment(R.layout.fragment_food_preview) {
                 }
             }
 
-            fabFoodPreview.setOnClickListener {    //todo beautification -> extract view util function
+            fabFoodPreview.setOnClickListener {
                 if (isFabActive) {
-                    fabFoodPreview.backgroundTintList =
-                        resources.getColorStateList(R.color.tint_white)
-                    val myFabSrc = resources.getDrawable(R.drawable.ic_star_filled)
-                    val willBeWhite = myFabSrc.constantState!!.newDrawable().apply {
-                        mutate()
-                            .setColorFilter(
-                                resources.getColor(R.color.orange),
-                                PorterDuff.Mode.MULTIPLY
-                            )
-                    }
-                    fabFoodPreview.setImageDrawable(willBeWhite)
+                    fabFoodPreview.setFabIcon(
+                        R.color.tint_white,
+                        R.color.orange,
+                        R.drawable.ic_star_filled
+                    )
                     isFabActive = false
                 } else {
-                    fabFoodPreview.backgroundTintList =
-                        resources.getColorStateList(R.color.tint_orange)
-                    val myFabSrc = resources.getDrawable(R.drawable.ic_star_filled)
-                    val willBeWhite = myFabSrc.constantState!!.newDrawable().apply {
-                        mutate()
-                            .setColorFilter(
-                                resources.getColor(R.color.white),
-                                PorterDuff.Mode.MULTIPLY
-                            )
-                    }
-                    fabFoodPreview.setImageDrawable(willBeWhite)
+                    fabFoodPreview.setFabIcon(
+                        R.color.tint_orange,
+                        R.color.white,
+                        R.drawable.ic_star_filled
+                    )
                     isFabActive = true
                 }
             }
         }
 
         binding.toolbarFoodPreview.setOnMenuItemClickListener {
-            //todo
+            when (it.itemId) {
+                R.id.cart -> {
+                    //todo
+                }
+            }
             true
         }
         binding.toolbarFoodPreview.setNavigationOnClickListener {
             requireActivity().onBackPressed()
         }
         return binding.root
+    }
+
+    private fun setUpSpinner2() {
+        binding.spinner2.apply {
+            setSpinnerAdapter(IconSpinnerAdapter(this))
+            setItems(
+                arrayListOf(
+                    IconSpinnerItem(text = "Normal"),
+                    IconSpinnerItem(text = "No Veggies"),
+                    IconSpinnerItem(text = "No Sausages")
+                )
+            )
+            getSpinnerRecyclerView().layoutManager = LinearLayoutManager(context)
+            lifecycleOwner = this@FoodPreviewFragment
+        }
+    }
+
+    private fun setUpSpinner1() {
+        binding.spinner1.apply {
+            setSpinnerAdapter(IconSpinnerAdapter(this))
+            setItems(
+                arrayListOf(
+                    IconSpinnerItem(text = "Big Portion"),
+                    IconSpinnerItem(text = "Normal Portion"),
+                    IconSpinnerItem(text = "Small Portion")
+                )
+            )
+            getSpinnerRecyclerView().layoutManager = LinearLayoutManager(context)
+            lifecycleOwner = this@FoodPreviewFragment
+        }
     }
 }

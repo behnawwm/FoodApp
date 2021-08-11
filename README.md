@@ -3,12 +3,21 @@
 # FoodApp
 
 In this app I focused on implementing an interactive & beautiful design for a sample food ordering app!
+
 It's still an uncomplete project but good enough for my purpose!
 
+It can be continued if backedup by an API...!
 
-<!-- ## Features
-- Saving photo to external storage
-- viewing saved & favorite photos (todo) -->
+
+## Features
+- User login (via username || google || facebook) & register (OTP) procedure implementation
+- Intro slider procedure
+- ready to connect to the business logic and a repository for real data
+- Viewing restaurants on the map (todo)
+- Cart ordering and payment stuff (todo)
+- Notifying user for the order's process (todo)
+- Selecting current location for the order (todo)
+- Profile customization (todo)
 
 ## Tech stack & Open-source libraries
 This project is based on MVVM architecture, using following tech-stacks:

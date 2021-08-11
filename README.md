@@ -11,8 +11,12 @@ It can be continued if backedup by an API...!
 
 ## Features
 - User login (via username || google || facebook) & register (OTP) procedure implementation
-- Intro slider procedure
-- ready to connect to the business logic and a repository for real data
+- Intro slider
+- ready to connect to the business logic and a repository for dynamic data
+- Food preview 
+- Full menu preview
+- Viewing profile
+- Searching among all foods & restaurants (todo -> repository)
 - Viewing restaurants on the map (todo)
 - Cart ordering and payment stuff (todo)
 - Notifying user for the order's process (todo)

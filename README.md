@@ -4,6 +4,8 @@
 
 In this app I focused on implementing an interactive & beautiful design for a sample food ordering app!
 
+**[Preview Video](https://www.youtube.com/watch?v=1lklPTRa0a8)**
+
 It's still an uncomplete project but good enough for my purpose!
 
 It can be continued if backedup by an API...!

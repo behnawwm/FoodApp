@@ -39,7 +39,7 @@
             android:background="@drawable/bg_filled_oval_orange"
             android:backgroundTint="@color/gray"
             android:hint="Name"
-            android:paddingLeft="34dp"
+            android:paddingStart="34dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -52,7 +52,7 @@
             android:background="@drawable/bg_filled_oval_orange"
             android:backgroundTint="@color/gray"
             android:hint="Email"
-            android:paddingLeft="34dp"
+            android:paddingStart="34dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
@@ -66,7 +66,7 @@
             android:background="@drawable/bg_filled_oval_orange"
             android:backgroundTint="@color/gray"
             android:hint="Mobile No"
-            android:paddingLeft="34dp"
+            android:paddingStart="34dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputEditText3" />
@@ -80,7 +80,7 @@
             android:background="@drawable/bg_filled_oval_orange"
             android:backgroundTint="@color/gray"
             android:hint="Address"
-            android:paddingLeft="34dp"
+            android:paddingStart="34dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputEditText4" />
@@ -94,7 +94,7 @@
             android:background="@drawable/bg_filled_oval_orange"
             android:backgroundTint="@color/gray"
             android:hint="Password"
-            android:paddingLeft="34dp"
+            android:paddingStart="34dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputEditText6" />
@@ -108,7 +108,7 @@
             android:background="@drawable/bg_filled_oval_orange"
             android:backgroundTint="@color/gray"
             android:hint="Confirm Password"
-            android:paddingLeft="34dp"
+            android:paddingStart="34dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputEditText7" />

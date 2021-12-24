@@ -49,8 +49,8 @@
             android:drawableLeft="@drawable/ic_edit_10dp"
             android:drawablePadding="4dp"
             android:drawableTint="@color/white"
-            android:paddingLeft="12dp"
-            android:paddingRight="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="8dp"
             android:text="Edit Profile"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -77,8 +77,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/iv_circle_name"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/iv_circle_name"
             android:orientation="vertical">
 
             <TextView
@@ -121,8 +121,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/iv_circle_email"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/iv_circle_email"
             android:orientation="vertical">
 
             <TextView
@@ -164,8 +164,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/iv_circle_phone"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/iv_circle_phone"
             android:orientation="vertical">
 
             <TextView
@@ -204,8 +204,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="16dp"
-            android:layout_toRightOf="@id/iv_circle_address"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@id/iv_circle_address"
             android:orientation="vertical">
 
             <TextView

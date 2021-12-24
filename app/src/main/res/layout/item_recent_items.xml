@@ -21,7 +21,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
         android:orientation="vertical"
         app:layout_constraintStart_toEndOf="@+id/iv_photo"
         app:layout_constraintTop_toTopOf="@+id/iv_photo">
@@ -51,7 +51,7 @@
                 android:layout_width="10dp"
                 android:layout_height="10dp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="6dp"
+                android:layout_marginStart="6dp"
                 android:src="@drawable/ic_donut"
                 app:tint="@color/orange" />
 
@@ -59,7 +59,7 @@
                 android:id="@+id/tv_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
                 android:text="Western Food"
                 android:textColor="@color/gray_disabled"
                 android:textSize="11sp" />
@@ -81,7 +81,7 @@
                 android:id="@+id/tv_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
                 android:text="4.9"
                 android:textColor="@color/orange"
                 android:textSize="11sp" />
@@ -90,7 +90,7 @@
                 android:id="@+id/tv_ratings_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
                 android:text="(124 ratings)"
                 android:textColor="@color/gray_disabled"
                 android:textSize="11sp" />

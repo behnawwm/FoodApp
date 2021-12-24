@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/image_view"
-        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
         android:layout_marginBottom="45dp"
         android:ellipsize="end"
         android:gravity="center_vertical"
@@ -43,21 +43,21 @@
         android:id="@+id/tv_ratings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="6dp"
-        android:drawableLeft="@drawable/star"
         android:drawablePadding="4dp"
         android:text="4.9"
         android:textColor="@color/orange"
         android:textSize="11sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:drawableLeftCompat="@drawable/star" />
 
     <TextView
         android:id="@+id/tv_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
         android:text="Cafe"
         android:textColor="@color/white"
@@ -69,16 +69,16 @@
         android:id="@+id/tv_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="5dp"
-        android:drawableLeft="@drawable/ic_donut"
         android:drawablePadding="4dp"
-        android:drawableTint="@color/orange"
         android:text="Desserts"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/tv_desc"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:drawableTint="@color/orange"
+        app:drawableStartCompat="@drawable/ic_donut" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

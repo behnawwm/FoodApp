@@ -48,6 +48,9 @@ Build & install or [Get .APK](https://github.com/behnawwm/foodapp/raw/master/apk
 
 
 ## Screenshots:
+
+View screenshots better at [my portfolio](https://behnawwm.ir/portfolio)!
+
 <p float="left">
   <img src="https://github.com/behnawwm/FoodApp/blob/master/Screenshots/splash.jpg" width="20%" >
   <img src="https://github.com/behnawwm/FoodApp/blob/master/Screenshots/main.jpg" width="20%" >

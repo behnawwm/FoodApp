@@ -33,11 +33,14 @@ class HomeActivity : AppCompatActivity() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         navController = navHostFragment.findNavController()
+
         ///// appbar
         val appBarConfiguration = AppBarConfiguration(
             topLevelDestinationIds = setOf(
-                R.id.menuFragment, R.id.offersFragment,
-                R.id.homeFragment, R.id.moreFragment,
+                R.id.menuFragment,
+                R.id.offersFragment,
+                R.id.homeFragment,
+                R.id.moreFragment,
                 R.id.profileFragment
             ),
             fallbackOnNavigateUpListener = ::onSupportNavigateUp
@@ -70,16 +73,21 @@ class HomeActivity : AppCompatActivity() {
                 true
             }
 
+            navigateToHomeFragment()
             fabHome.setOnClickListener {
-                fabHome.backgroundTintList = resources.getColorStateList(R.color.tint_orange)
-                bottomNavigation.menu.forEach {
-                    if (it.isChecked)
-                        bottomNavigation.selectedItemId = R.id.menu_placeholder
-                }
-                navController.navigate(R.id.action_global_homeFragment)
+                navigateToHomeFragment()
             }
         }
 
+    }
+
+    private fun navigateToHomeFragment() {
+        binding.fabHome.backgroundTintList = resources.getColorStateList(R.color.tint_orange)
+        binding.bottomNavigation.menu.forEach {
+            if (it.isChecked)
+                binding.bottomNavigation.selectedItemId = R.id.menu_placeholder
+        }
+        navController.navigate(R.id.action_global_homeFragment)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
